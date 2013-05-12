@@ -4,6 +4,9 @@ gem 'rails', '3.2.13'
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'bootstrap-sass', '2.1'
+gem "devise-i18n", "~> 0.8.3"
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,9 +29,12 @@ end
 gem 'jquery-rails'
 
 group :test do
-  gem 'rspec-rails'
-  gem 'spork', '0.9.2'
+  gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
+  gem 'spork', '0.9.2'
+  gem 'capybara', '1.1.2'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
 end
 
 # To use ActiveModel has_secure_password
