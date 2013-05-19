@@ -6,6 +6,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'bootstrap-sass', '2.1'
 gem "devise-i18n", "~> 0.8.3"
+gem 'carrierwave'
 
 
 # Bundle edge Rails instead:
@@ -19,23 +20,28 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
 
 group :test do
+  gem 'rb-inotify', '~> 0.9'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
   gem 'spork', '0.9.2'
   gem 'capybara', '1.1.2'
-  gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  
+  
 end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

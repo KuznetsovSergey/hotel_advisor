@@ -1,0 +1,32 @@
+<% provide(:title, 'Add new Hotel') %>
+<h1>Add new Hotel</h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @hotel do |f| %>
+    <%= render 'shared/error_messages' %>
+        <%= f.label :title, "Title*:" %>
+        <%= f.text_field :title %>
+        <%= f.label :star_rating, "Star rating:" %>
+        <%= f.select :star_rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]] %>
+        <%= f.label :price, "Price:" %>
+        <%= f.text_field :price %>
+        <%= f.label :breakfast_included, "Breakfast included?:" %>
+        <%= f.select :breakfast_included, [['Yes', 'Yes'], ['No', "No"]] %>
+        <%= f.label :photo, "Photo:" %>
+        <%= f.file_field :photo %>
+        <%= fields_for :address do |address_form| %>
+            <%= address_form.label :country, "Сountry:" %>
+            <%= address_form.text_field :country %>
+            <%= address_form.label :state, "State:" %>
+            <%= address_form.text_field :state %>
+            <%= address_form.label :city, "City:" %>
+            <%= address_form.text_field :city %>
+            <%= address_form.label :street, "Street:" %>
+            <%= address_form.text_field :street %>
+        <% end %>
+        <%= f.label :room_description, "Description" %>
+        <%= f.text_area :room_description, :size => "24x6" %>
+        <%= f.submit "Add", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
