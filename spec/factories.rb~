@@ -11,7 +11,7 @@ FactoryGirl.define do
  	 factory :comment do
     content "Lorem Ipsum"
     evaluation 4
-    address
+    hotel
   end
 
   factory :address do
@@ -23,7 +23,7 @@ FactoryGirl.define do
    end
 
   factory :user do
-    email "user@example.com"
+    email "example@example.com"
     password "foobar"
   end
 

@@ -69,14 +69,5 @@ describe "User pages" do
         page.should have_content("Invalid email or password.")
     end
   end
-   describe "hotels" do
-   	visit "/users/sign_in"
-   	    fill_in "Email", with: "user@example.com"
-        fill_in "Password", with: "foobar"
-   	click_button "Sign in"
-   	visit "/hotels/new"
-   	page.should have_content("Add new Hotel")
 
-
-   end
 end

@@ -24,10 +24,8 @@ class HotelsController < ApplicationController
 	end
 
 	def show
-		if user_signed_in?
+
 				@hotel = Hotel.where(id: params[:id]).first
-			else
-				redirect_to new_user_session_path
-		end
+
 	end
 end
