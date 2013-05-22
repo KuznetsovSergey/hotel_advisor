@@ -3,13 +3,15 @@ class HotelsController < ApplicationController
 	def index
 		@hotel = Hotel.all
 	end
+
 	def new
-		if user_signed_in? 
+		if user_signed_in?
 			@hotel = Hotel.new
 		else
-			redirect_to new_user_session_path 
+			redirect_to new_user_session_path
 		end
 	end
+
 	def create
 		@hotel = Hotel.new(params[:hotel])
 		@hotel.address = Address.new(params[:address])
@@ -22,6 +24,8 @@ class HotelsController < ApplicationController
 	end
 
 	def show
-		
+
+				@hotel = Hotel.where(id: params[:id]).first
+
 	end
 end

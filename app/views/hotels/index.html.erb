@@ -3,14 +3,16 @@
 <% @hotel.each do |hotel| %>
   <li class="span4">
     <div class="thumbnail">
- 	  <%= image_tag hotel.photo_url.to_s %>
+      <%= link_to  hotel_path(hotel) do %>
+ 	      <%= image_tag hotel.photo_url.to_s %>
+      <% end %>
       <h3><%= hotel.title %></h3>
       <p><%= hotel.room_description %></p>
       <ul>
+        <li>Star rating:&nbsp;<%= hotel.star_rating %> </li>
         <li>Price:&nbsp;<%= hotel.price %> </li>
         <li>Breakfast included:&nbsp;<%= hotel.breakfast_included %></li>
         <li>Country:&nbsp;<%= hotel.address.country %></li>
-		<li>State:&nbsp;<%= hotel.address.state %></li>
         <li>State:&nbsp;<%= hotel.address.state %></li>
         <li>City:&nbsp;<%= hotel.address.city %></li>
         <li>Street:&nbsp;<%= hotel.address.street %></li>

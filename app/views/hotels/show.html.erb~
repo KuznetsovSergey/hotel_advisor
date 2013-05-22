@@ -1,0 +1,20 @@
+ <div class="thumbnail">
+ 	      <%= image_tag @hotel.photo_url.to_s, size:"240x240" %>
+      <h3><%= @hotel.title %></h3>
+      <p><%= @hotel.room_description %></p>
+      <ul>
+        <li>Star rating:&nbsp;<%= @hotel.star_rating %> </li>
+        <li>Price:&nbsp;<%= @hotel.price %> </li>
+        <li>Breakfast included:&nbsp;<%= @hotel.breakfast_included %></li>
+        <li>Country:&nbsp;<%= @hotel.address.country %></li>
+        <li>State:&nbsp;<%= @hotel.address.state %></li>
+        <li>City:&nbsp;<%= @hotel.address.city %></li>
+        <li>Street:&nbsp;<%= @hotel.address.street %></li>
+        </ul>
+</div>
+<% if user_signed_in? %>
+    <%= render 'layouts/comments_form' %>
+<% else %>
+		<b>Comment can only registered users. <%= link_to "Sign in", new_user_session_path  %> or <%= link_to "register",new_user_registration_path %></b>
+<% end %>
+<%= render 'layouts/comments' %>

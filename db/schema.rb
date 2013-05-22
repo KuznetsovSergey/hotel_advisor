@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130513201759) do
+ActiveRecord::Schema.define(:version => 20130520163232) do
 
   create_table "addresses", :force => true do |t|
     t.string   "country"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(:version => 20130513201759) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "comments", :force => true do |t|
+    t.string   "content"
+    t.integer  "evaluation"
+    t.integer  "hotel_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "comments", ["hotel_id", "evaluation", "created_at"], :name => "index_comments_on_hotel_id_and_evaluation_and_created_at"
 
   create_table "hotels", :force => true do |t|
     t.string   "title"

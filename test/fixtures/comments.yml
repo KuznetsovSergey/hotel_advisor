@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: MyString
+  evaluation: 1
+  hotel_id: 1
+
+two:
+  content: MyString
+  evaluation: 1
+  hotel_id: 1

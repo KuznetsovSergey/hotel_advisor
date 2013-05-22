@@ -8,6 +8,12 @@ FactoryGirl.define do
     photo File.open(File.join(Rails.root, '/public/img.png'))
   end
 
+ 	 factory :comment do
+    content "Lorem Ipsum"
+    evaluation 4
+    hotel
+  end
+
   factory :address do
     country "Ukraine"
     state "Crimea"
@@ -20,5 +26,5 @@ FactoryGirl.define do
     email "user@example.com"
     password "foobar"
   end
- 
+
 end

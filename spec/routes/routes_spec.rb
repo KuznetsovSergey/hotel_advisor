@@ -7,14 +7,10 @@ describe "Routes" do
 	end
 	describe "Sign up page" do
 		before { visit "/users/sign_up" }
-		it { should have_selector('title',text: "Sign up" ) }				
+		it { should have_selector('title',text: "Sign up" ) }
 	end
 	describe "Sign in page" do
 		before { visit "/users/sign_in" }
 		it { should have_selector('title',text: "Sign in" ) }
 	end
-	describe "Forgot password page" do
-		before { visit "/users/password/new" }
-		it { should have_selector('title',text: "Forgot your password?" )  }
-	end	
 end

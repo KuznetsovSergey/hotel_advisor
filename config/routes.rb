@@ -2,6 +2,7 @@ HotelAdvisor::Application.routes.draw do
   devise_for :users
   resources :hotels do
     resources :addresses
+    resources :comments
   end
   root :to => 'hotels#index'
 
