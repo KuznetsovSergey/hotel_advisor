@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
       flash[:success] = "The comment has successfully added"
       redirect_to hotel_path(@hotel)
     else
-      redirect_to hotel_path(@hotel)
+      redirect_to hotel_path(@hotel)  
     end
   end
 end

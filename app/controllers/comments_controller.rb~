@@ -1,12 +1,12 @@
 class CommentsController < ApplicationController
   def create
-    @hotel = Item.find(params[:hotel_id])
+    @hotel = Hotel.find(params[:hotel_id])
     @comment = @hotel.comments.create(params[:comment])
     if  @comment.save
       flash[:success] = "The comment has successfully added"
       redirect_to hotel_path(@hotel)
     else
-      redirect_to hotel_path(@hotel)
+      redirect_to hotel_path(@hotel)  
     end
   end
 end

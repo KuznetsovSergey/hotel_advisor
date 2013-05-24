@@ -4,12 +4,13 @@ describe "Hotels pages" do
 	subject { page }
 	let(:submit) { "Add" }
   let(:user) { FactoryGirl.create(:user) }
+  let(:hotel) { FactoryGirl.create(:hotel) }
 	before { sign_in user }
 	before { visit new_hotel_path}
 
- 	it "visit hotel page" do
+	it "visit hotel page" do
 		page.should have_content("Add new Hotel")
-  end
+	end
 
 	describe "with valid information" do
 
@@ -32,4 +33,17 @@ describe "Hotels pages" do
 			page.should have_content("The hotel has successfully added")
 		end
 	end
+	
+	describe "without reliable information" do
+		it "should no valid message" do
+			click_button submit
+			page.should have_content("Title can't be blank")
+		end
+	end
+	
 end
+
+
+
+
+

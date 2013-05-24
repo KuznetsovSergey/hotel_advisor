@@ -1,22 +1,22 @@
 <%= form_for([@hotel, @hotel.comments.build]) do |f| %>
-   <div class="evaluation">
-     <b>Please vote hotel: </b>
-     <%= f.label(:evaluation, "1") %>
-     <%= f.radio_button(:evaluation, "1",checked: "checked") %>
-     <%= f.label(:evaluation, "2") %>
-     <%= f.radio_button(:evaluation, "2") %>
-     <%= f.label(:evaluation, "3") %>
-     <%= f.radio_button(:evaluation, "3") %>
-     <%= f.label(:evaluation, "4") %>
-     <%= f.radio_button(:evaluation, "4") %>
-     <%= f.label(:evaluation, "5") %>
-     <%= f.radio_button(:evaluation, "5") %>
-   </div>
-    <p>
-      <%= f.label :content, "Comment:" %>
-      <%= f.text_area :content, :size => "24x6" %>
-    </p>
-    <p>
-      <%= f.submit "Add comment", class: "btn btn-large btn-primary" %>
-    </p>
+	<div class="evaluation">
+		<b>Please vote hotel: </b>
+		<%= f.label(:evaluation, "1") %>
+		<%= f.radio_button(:evaluation, "1",checked: "checked") %>
+		<%= f.label(:evaluation, "2") %>
+		<%= f.radio_button(:evaluation, "2") %>
+		<%= f.label(:evaluation, "3") %>
+		<%= f.radio_button(:evaluation, "3") %>
+		<%= f.label(:evaluation, "4") %>
+		<%= f.radio_button(:evaluation, "4") %>
+		<%= f.label(:evaluation, "5") %>
+		<%= f.radio_button(:evaluation, "5") %>
+	</div>
+	<p>
+		<%= f.label :content, "Comment:" %>
+		<%= f.text_area :content, :size => "24x6" %>
+	</p>
+	<p>
+		<%= f.submit "Add comment", class: "btn btn-large btn-primary" %>
+	</p>
 <% end %>

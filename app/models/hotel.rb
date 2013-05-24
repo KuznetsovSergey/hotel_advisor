@@ -3,7 +3,7 @@ class Hotel < ActiveRecord::Base
 
 	mount_uploader :photo, PhotoUploader
 
-  validates :title, presence: true, length:  { maximum: 50 }
+  validates :title, presence: true, length:  {  maximum: 50 }
 
   has_one :address
   has_many :comments

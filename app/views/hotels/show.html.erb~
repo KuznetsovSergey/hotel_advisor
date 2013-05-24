@@ -1,4 +1,5 @@
  <div class="thumbnail">
+  <%= render 'shared/error_messages' %>
  	      <%= image_tag @hotel.photo_url.to_s, size:"240x240" %>
       <h3><%= @hotel.title %></h3>
       <p><%= @hotel.room_description %></p>
@@ -10,11 +11,12 @@
         <li>State:&nbsp;<%= @hotel.address.state %></li>
         <li>City:&nbsp;<%= @hotel.address.city %></li>
         <li>Street:&nbsp;<%= @hotel.address.street %></li>
-        </ul>
+      </ul>
 </div>
 <% if user_signed_in? %>
     <%= render 'layouts/comments_form' %>
 <% else %>
-		<b>Comment can only registered users. <%= link_to "Sign in", new_user_session_path  %> or <%= link_to "register",new_user_registration_path %></b>
+ <div class="unsigned_links"><b>Comment can only registered users. <%= link_to "Sign in", new_user_session_path  %> or <%= link_to "register",new_user_registration_path %></b></div>
+
 <% end %>
 <%= render 'layouts/comments' %>
