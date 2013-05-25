@@ -64,7 +64,6 @@ p {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
 }
@@ -81,8 +80,12 @@ input {
 }
 .evaluation{
 	margin-top:10px;
+	height:30px;
+	line-height:30px;
 }
 .evaluation label{
 	display:inline-block;
-	padding:3px;
+}	
+.unsigned_links{
+	padding: 10px;
 }

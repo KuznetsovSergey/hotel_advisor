@@ -1,7 +1,7 @@
 class HotelsController < ApplicationController
 
 	def index
-		@hotel = Hotel.all
+		@hotel = Hotel.order('items.total_rating DESC').limit(5)
 	end
 
 	def new
@@ -25,7 +25,6 @@ class HotelsController < ApplicationController
 
 	def show
 		@hotel = Hotel.where(id: params[:id]).first
-		@comment = Comment.new
 	end
 
 end

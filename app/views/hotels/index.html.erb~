@@ -2,11 +2,11 @@
 <ul class="thumbnails">
 <% @hotel.each do |hotel| %>
 <li class="span4">
-    <div class="thumbnail"> 	
+    <div class="thumbnail">
+    	<p>Rating of this hotel:<%= hotel.total_rating %></p>
       <%= link_to  hotel_path(hotel) do %>
  	      <%= image_tag hotel.photo_url.to_s %>
       <% end %>
-      <p>Rating of this hotel:<%= hotel.total_rating %></p>
       <h3><%= hotel.title %></h3>
       <p><%= hotel.room_description %></p>
       <ul>

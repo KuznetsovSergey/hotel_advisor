@@ -1,11 +1,14 @@
+<% unless @hotel.comments.id.nil? %>
 <% @hotel.comments.each do |comment| %>
 <p><%= comment.created_at %></p>
     <p>
-      <strong>Оценка:</strong>
+      <strong>Evaluation:</strong>
       <%= comment.evaluation %>
     </p>
     <p>
-      <strong>Комментарий:</strong>
+      <strong>Comment:</strong>
       <%= comment.content %>
     </p>
 <% end %>
+<% end %>
+

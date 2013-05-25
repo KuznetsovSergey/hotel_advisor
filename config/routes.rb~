@@ -1,11 +1,12 @@
 HotelAdvisor::Application.routes.draw do
   devise_for :users
-  resources :users
+
   resources :hotels do
     resources :addresses
     resources :comments
   end
   root :to => 'hotels#index'
+  get "hotels/:id" => "hotels#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

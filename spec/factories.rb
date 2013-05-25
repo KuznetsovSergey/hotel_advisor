@@ -6,6 +6,7 @@ FactoryGirl.define do
     breakfast_included "Yes"
     room_description "Lorem Ipsum"
     photo File.open(File.join(Rails.root, '/public/img.png'))
+    price 200
   end
 
  	 factory :comment do

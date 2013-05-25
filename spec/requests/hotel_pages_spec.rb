@@ -4,7 +4,6 @@ describe "Hotels pages" do
 	subject { page }
 	let(:submit) { "Add" }
   let(:user) { FactoryGirl.create(:user) }
-  let(:hotel) { FactoryGirl.create(:hotel) }
 	before { sign_in user }
 	before { visit new_hotel_path}
 
